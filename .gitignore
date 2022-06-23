@@ -1,1 +1,5 @@
+# Environmental variables
 .env
+
+# Some  Apple stuff
+.DS_Store
