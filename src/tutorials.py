@@ -8,6 +8,7 @@ import pandas as pd
 import dask.dataframe as dd
 import dask.array as da
 import dask.bag as db
+from enum import Enum
 
 
 ### Prefect ###
@@ -30,4 +31,10 @@ df = pd.DataFrame({"a": np.arange(2400), "b": list("abcaddbe" * 300)}, index=ind
 ddf = dd.from_pandas(df, npartitions=10)
 
 
-print(ddf.b.unique().compute())
+### Enum ###
+
+
+class Danger(Enum):
+    LOW = 1
+    MEDIUM = 2
+    HIGH = 3
